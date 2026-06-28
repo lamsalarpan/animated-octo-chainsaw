@@ -1,0 +1,166 @@
+/* ============================================
+   Dark Mode — applied via [data-theme="dark"] on <html>
+   Works alongside the existing Bootstrap-based styles.css
+   ============================================ */
+
+html[data-theme="dark"] {
+  --bs-body-bg: #14151a;
+  --bs-body-color: #e7e7ea;
+  --bs-light: #1f2026;
+  --bs-light-rgb: 31, 32, 38;
+  --bs-dark: #f8f9fa;
+}
+
+html[data-theme="dark"] body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Navbar */
+html[data-theme="dark"] .navbar.bg-white,
+html[data-theme="dark"] footer.bg-white {
+  background-color: #1a1b21 !important;
+  border-color: #2a2b32 !important;
+}
+
+html[data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+  color: #c7c8cf;
+}
+
+html[data-theme="dark"] .navbar-light .navbar-nav .nav-link:hover,
+html[data-theme="dark"] .navbar-light .navbar-nav .nav-link.active {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .navbar-toggler {
+  border-color: #3a3b42;
+}
+
+html[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Cards and surfaces */
+html[data-theme="dark"] .card {
+  background-color: #1c1d23;
+  color: var(--bs-body-color);
+}
+
+html[data-theme="dark"] .bg-light {
+  background-color: #1f2026 !important;
+}
+
+html[data-theme="dark"] .bg-white {
+  background-color: #1c1d23 !important;
+}
+
+html[data-theme="dark"] .text-dark {
+  color: #e7e7ea !important;
+}
+
+html[data-theme="dark"] .text-muted {
+  color: #9a9ba5 !important;
+}
+
+html[data-theme="dark"] .border,
+html[data-theme="dark"] .border-top {
+  border-color: #2a2b32 !important;
+}
+
+html[data-theme="dark"] hr {
+  border-color: #2a2b32;
+  opacity: 1;
+}
+
+/* Form controls */
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select {
+  background-color: #1f2026;
+  border-color: #34353d;
+  color: var(--bs-body-color);
+}
+
+html[data-theme="dark"] .form-control:focus,
+html[data-theme="dark"] .form-select:focus {
+  background-color: #1f2026;
+  color: var(--bs-body-color);
+}
+
+html[data-theme="dark"] .form-control::placeholder {
+  color: #767781;
+}
+
+/* Shadows read better softened on dark backgrounds */
+html[data-theme="dark"] .shadow,
+html[data-theme="dark"] .shadow-sm {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Buttons that rely on light outlines */
+html[data-theme="dark"] .btn-outline-primary {
+  color: #7c8cff;
+  border-color: #7c8cff;
+}
+
+html[data-theme="dark"] .btn-outline-primary:hover {
+  color: #14151a;
+  background-color: #7c8cff;
+}
+
+html[data-theme="dark"] .btn-light {
+  background-color: #e7e7ea;
+  color: #14151a;
+  border-color: #e7e7ea;
+}
+
+/* Demo panel (projects.html slide-in) */
+html[data-theme="dark"] .demo-panel {
+  background-color: #1c1d23;
+}
+
+html[data-theme="dark"] .demo-panel-header {
+  border-color: #2a2b32;
+}
+
+html[data-theme="dark"] .demo-panel-body {
+  background-color: #14151a;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: inherit;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-left: 0.75rem;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+html[data-theme="dark"] .theme-toggle-btn {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+html[data-theme="dark"] .theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Smooth transition when switching themes */
+body,
+.card,
+.navbar,
+footer,
+.form-control {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
